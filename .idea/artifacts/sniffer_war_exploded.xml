@@ -1,0 +1,35 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="sniffer:war exploded">
+    <output-path>$PROJECT_DIR$/target/sniffer</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="sniffer" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.6" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: displaytag:displaytag:1.2" />
+          <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.1" />
+          <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.3" />
+          <element id="library" level="project" name="Maven: com.lowagie:itext:1.3" />
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.7.0" />
+          <element id="library" level="project" name="Maven: org.slf4j:jcl104-over-slf4j:1.4.2" />
+          <element id="library" level="project" name="Maven: opensymphony:sitemesh:2.4.2" />
+          <element id="library" level="project" name="Maven: org.webjars:font-awesome:4.4.0" />
+          <element id="library" level="project" name="Maven: org.webjars:jquery-ui:1.11.3" />
+          <element id="library" level="project" name="Maven: org.webjars:jquery:1.11.1" />
+          <element id="library" level="project" name="Maven: org.webjars:bootstrap-growl:2.0.1" />
+          <element id="library" level="project" name="Maven: org.webjars:webjars-servlet-2.x:1.1" />
+          <element id="library" level="project" name="Maven: org.webjars:bootstrap:3.3.5" />
+          <element id="library" level="project" name="Maven: org.webjars:jquery-validation:1.14.0" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/sniffer/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="sniffer/web/Web" />
+    </root>
+  </artifact>
+</component>

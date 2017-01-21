@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - sniffer@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="sniffer">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="contr"/>
+    <schema id="3" name="information_schema"/>
+    <schema id="4" name="mysql"/>
+    <schema id="5" name="oo"/>
+    <schema id="6" name="performance_schema"/>
+    <schema id="7" name="sakila"/>
+    <schema id="8" name="semesrtbd"/>
+    <schema id="9" name="semestr"/>
+    <schema id="10" name="sys"/>
+    <schema id="11" name="tourism"/>
+    <schema id="12" name="work"/>
+    <schema id="13" name="world"/>
+    <table id="14" parent="1" name="databasechangelog"/>
+    <table id="15" parent="1" name="databasechangeloglock"/>
+    <table id="16" parent="1" name="sniffresult"/>
+    <table id="17" parent="1" name="user_roles"/>
+    <table id="18" parent="1" name="users"/>
+    <column id="19" parent="14" name="ID">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="20" parent="14" name="AUTHOR">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="21" parent="14" name="FILENAME">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="22" parent="14" name="DATEEXECUTED">
+      <mandatory>1</mandatory>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="23" parent="14" name="ORDEREXECUTED">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="24" parent="14" name="EXECTYPE">
+      <mandatory>1</mandatory>
+      <data-type>varchar(10)|0</data-type>
+    </column>
+    <column id="25" parent="14" name="MD5SUM">
+      <data-type>varchar(35)|0</data-type>
+    </column>
+    <column id="26" parent="14" name="DESCRIPTION">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="27" parent="14" name="COMMENTS">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="28" parent="14" name="TAG">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="29" parent="14" name="LIQUIBASE">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="30" parent="14" name="CONTEXTS">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="31" parent="14" name="LABELS">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="32" parent="15" name="ID">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="33" parent="15" name="LOCKED">
+      <mandatory>1</mandatory>
+      <data-type>bit(1)|0</data-type>
+    </column>
+    <column id="34" parent="15" name="LOCKGRANTED">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="35" parent="15" name="LOCKEDBY">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="36" parent="15" name="PRIMARY">
+      <columns>ID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="37" parent="16" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="38" parent="16" name="referer">
+      <data-type>varchar(1000)|0</data-type>
+    </column>
+    <column id="39" parent="16" name="hijackedurl">
+      <data-type>varchar(1000)|0</data-type>
+    </column>
+    <column id="40" parent="16" name="author">
+      <data-type>varchar(1000)|0</data-type>
+    </column>
+    <column id="41" parent="16" name="sniffdate">
+      <mandatory>1</mandatory>
+      <data-type>timestamp(6)|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP(6)</default-expression>
+    </column>
+    <key id="42" parent="16" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="43" parent="17" name="user_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="44" parent="17" name="role_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <key id="45" parent="17" name="PRIMARY">
+      <columns>user_name
+role_name</columns>
+      <primary>1</primary>
+    </key>
+    <column id="46" parent="18" name="user_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="47" parent="18" name="password">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <key id="48" parent="18" name="PRIMARY">
+      <columns>user_name</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

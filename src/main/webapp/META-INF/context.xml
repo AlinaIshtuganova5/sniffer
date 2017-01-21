@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context >
+    <Resource
+            driverClassName="com.mysql.jdbc.Driver"
+            maxActive="100"
+            maxIdle="30"
+            maxWait="5000"
+            name="jdbc/sniffer"
+            username="root"
+            password="jlbyghjwtyn"
+            type="javax.sql.DataSource"
+            url="jdbc:mysql://localhost/sniffer?characterEncoding=utf8"
+            validationQuery="SELECT 1">
+    </Resource>
+
+    <Realm className="org.apache.catalina.realm.CombinedRealm">
+        <Realm className="org.apache.catalina.realm.MemoryRealm" pathname="${user.dir}/src/main/webapp/WEB-INF/tomcat-users.xml"/>
+        <Realm className="org.apache.catalina.realm.JDBCRealm"
+               digest="MD5"
+               driverName="com.mysql.jdbc.Driver"
+               connectionURL="jdbc:mysql://localhost/sniffer"
+               connectionName="root" connectionPassword="jlbyghjwtyn"
+               userTable="users" userNameCol="user_name" userCredCol="password"
+               userRoleTable="user_roles" roleNameCol="role_name"/>
+    </Realm>
+</Context>
