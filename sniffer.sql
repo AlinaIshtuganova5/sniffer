@@ -1,4 +1,3 @@
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8mb4 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
@@ -78,24 +77,24 @@ INSERT INTO `sniffresult` (id, referer, hijackedurl, author, sniffdate) VALUES
 
 
 
--- Дамп данных таблицы sniffer.users: ~4 rows (приблизительно)
+
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`user_name`, `password`) VALUES
-  ('hacker', 'd6a6bc0db10694a2d90e3a69648f3a03'),
-  ('hacker1', '2ba2a8ac968a7a2b0a7baa7f2fef18d2'),
-  ('user', '914a23f72f590809d3fe431573ecb71f'),
+  ('user', '9ef8295458b745af7a392ab23802ba7b'),
+  ('hacker1', '1b2b4c6643b5c96a07abdf16fb2220fe'),
+  ('hacker', 'b9049640fdab0fea20d2af6ac2965405'),
   ('user1', '24c9e15e52afc47c225b757e7bee1f9d');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 
--- Дамп структуры для таблица sniffer.user_roles
+
 CREATE TABLE IF NOT EXISTS `user_roles` (
   `user_name` varchar(20) NOT NULL,
   `role_name` varchar(20) NOT NULL,
   PRIMARY KEY (`user_name`,`role_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы sniffer.user_roles: ~4 rows (приблизительно)
+
 /*!40000 ALTER TABLE `user_roles` DISABLE KEYS */;
 INSERT INTO `user_roles` (`user_name`, `role_name`) VALUES
   ('hacker', 'hacker'),
